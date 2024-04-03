@@ -1,0 +1,67 @@
+﻿@model SignupViewModel
+
+<h2>Register here</h2>
+<div asp-validation-summary="All"></div>
+<form method="post" asp-action="Signup" asp-controller="Account">
+    <p>
+        <div>
+            <label asp-for="FirstName"></label>
+        </div>
+        <p>
+            <span asp-validation-for="FirstName" style="color:red"></span>
+        </p>
+        <p>
+            <input asp-for="FirstName"  />
+        </p>
+    </p>
+
+    <p>
+        <div>
+            <label asp-for="LastName"></label>
+        </div>
+        <p>
+        <span asp-validation-for="LastName" style="color:red"></span>
+        </p>
+        <p>
+            <input asp-for="LastName"  />
+        </p>
+    </p>
+    <p>
+        <div>
+            <label asp-for="Email"></label>
+        </div>
+        <p>
+        <span asp-validation-for="Email" style="color:red"></span>
+        </p>
+        <p>
+            <input asp-for="Email"  />
+        </p>
+    </p>
+    <p>
+        <div>
+            <label asp-for="Password"></label>
+        </div>
+        <p>
+        <span asp-validation-for="Password" style="color:red"></span>
+        </p>
+        <p>
+            <input asp-for="Password"  />
+        </p>
+    </p>
+    <p>
+        <div>
+            <label asp-for="ConfirmPassword"></label>
+        </div>
+        <p>
+        <span asp-validation-for="ConfirmPassword" style="color:red"></span>
+        </p>
+        <p>
+            <input asp-for="ConfirmPassword"  />
+        </p>
+    </p>
+    <p>
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </p>
+    Already have an accont? <a asp-action="Login" asp-controller="Account">Log in here</a>
+
+</form>

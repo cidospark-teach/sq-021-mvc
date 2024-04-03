@@ -1,0 +1,35 @@
+﻿@model ContactViewModel
+
+<h1>Send a message.</h1>
+
+<form method="post" asp-action="ContactPage" asp-controller="home">
+    
+    <p>
+        <p>
+            <label asp-for="RecipientEmail"></label> <span style="color:red">*</span>
+        </p>
+    <p><span asp-validation-for="RecipientEmail" style="color:red"></span></p>
+    <input asp-for="RecipientEmail" placeholder="Enter a subject" />
+    </p>
+
+    <p>
+        <p>
+            <label asp-for="Subject"></label> <span style="color:red">*</span>
+        </p>
+        <p><span asp-validation-for="Subject" style="color:red"></span></p>
+        <input asp-for="Subject" placeholder="Enter a subject" />
+    </p>
+
+    <p>
+        <p>
+            <label asp-for="Message"></label> <span style="color:red">*</span>
+        </p>
+        <p><span asp-validation-for="Message" style="color:red"></span></p>
+        <textarea cols="50" rows="10" asp-for="Message" placeholder="Write a short message of 150 characters max and 15 characters min"></textarea>
+    </p>
+
+    <p>
+        <button type="submit" class="add-btn">Submit</button>
+    </p>
+
+</form>

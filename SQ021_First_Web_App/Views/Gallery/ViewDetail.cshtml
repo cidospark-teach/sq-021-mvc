@@ -1,0 +1,31 @@
+﻿@model DogPortriat
+
+<h1>View Dog Details</h1>
+<br/>
+<div class="detail-panel">
+    <div class="left-box">
+        <div class="image-box">
+            @{
+                var url = "";
+                if (string.IsNullOrEmpty(Model.PhotoUrl))
+                {
+                    url = "~/images/default.jpg";
+                }
+                else
+                {
+                    url = Model.PhotoUrl;
+                }
+            }
+            <img src="@url" asp-append-version=true />
+        </div>
+        <div class="actions">
+            <a id="upd-btn" asp-action="Update" asp-controller="gallery" asp-route-id="@Model.Id">Update</a>
+            <a id="del-btn" asp-action="Delete" asp-controller="gallery" asp-route-id="@Model.Id">Delete</a>
+            <a id="upd-btn" asp-action="ImageUpload" asp-controller="gallery" asp-route-id="@Model.Id">Upload Photo</a>
+        </div>
+    </div>
+    <div class="description-box right-box">
+        <h2>@Model.Name</h2>
+        <p>@Model.Description</p>
+    </div>
+</div>

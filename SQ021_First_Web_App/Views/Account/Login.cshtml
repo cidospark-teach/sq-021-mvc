@@ -1,0 +1,44 @@
+﻿@model LoginViewModel
+@{
+    var returnUrl = "/";
+    if(!string.IsNullOrEmpty(ViewBag.ReturnUrl))
+    {
+        returnUrl = ViewBag.ReturnUrl;
+    }
+}
+
+<h2>Login here</h2>
+<div asp-validation-summary="All"></div>
+<form method="post" asp-action="Login" asp-controller="Account" asp-route-returnUrl="@returnUrl">
+    
+    <p>
+        <div>
+            <label asp-for="Email"></label>
+        </div>
+        <p>
+        <span asp-validation-for="Email" style="color:red"></span>
+        </p>
+        <p>
+            <input asp-for="Email"  />
+        </p>
+    </p>
+    <p>
+        <div>
+            <label asp-for="Password"></label>
+        </div>
+        <p>
+        <span asp-validation-for="Password" style="color:red"></span>
+        </p>
+        <p>
+            <input asp-for="Password"  />
+        </p>
+    </p>
+    <p>
+        <input asp-for="RememberMe" /> Remember Me
+    </p>
+    <p>
+        <button type="submit" class="btn btn-primary">Log in</button>
+    </p>
+
+    Don't have an accont? <a asp-action="Signup" asp-controller="Account">Sign up here</a>
+</form>

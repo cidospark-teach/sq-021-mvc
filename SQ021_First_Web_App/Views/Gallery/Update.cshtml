@@ -1,0 +1,28 @@
+﻿@model UpdateDogViewModel
+
+
+<h1>Update @Model.Name's details</h1>
+
+<form method="post" asp-action="update" asp-controller="gallery">
+
+    <p>
+        <p>
+            <label asp-for="Name"></label> <span style="color:red">*</span>
+        </p>
+        <p><span asp-validation-for="Name" style="color:red"></span></p>
+        <input asp-for="Name" placeholder="Enter dog naame" />
+    </p>
+
+    <p>
+        <p>
+            <label asp-for="Description"></label> <span style="color:red">*</span>
+        </p>
+        <p><span asp-validation-for="Description" style="color:red"></span></p>
+        <textarea cols="50" rows="10" asp-for="Description" placeholder="Write a short description of 150 characters max and 15 characters min"></textarea>
+    </p>
+
+    <p>
+        <button type="submit" class="add-btn">Update</button>
+    </p>
+
+</form>

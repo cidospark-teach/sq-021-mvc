@@ -1,0 +1,23 @@
+﻿@model ImageUploadViewModel
+
+
+<h1>Upload image for @Model.DogName </h1>
+
+<form method="post" asp-action="ImageUpload" asp-controller="gallery" enctype="multipart/form-data">
+
+    <p>
+        <p>
+            <label style="color:orange;">Select Photo that is not more than 2mb</label>
+        </p>
+
+        <div asp-validation-summary="All" style="color:red;"></div>
+
+        <input asp-for="Id" hidden="hidden"/>
+        <input asp-for="Photo"/>
+    </p>
+
+    <p>
+        <button type="submit" class="add-btn">Upload</button>
+    </p>
+
+</form>

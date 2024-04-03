@@ -1,0 +1,28 @@
+﻿@model GalleryViewModel
+
+<div class="flexed">
+    <h1>Gallery Page</h1>
+    <a asp-action="addNew" asp-controller="gallery" class="add-btn">Add New</a>
+</div>
+
+
+<div class="dog-frame-panel">
+    @foreach(var portriat in Model.DogPortriats){
+        <a asp-controller="gallery" asp-action="viewDetail" asp-route-id="@portriat.Id">
+            <div class="dog-frame" id="dog-1">
+                @{
+                    var url = "";
+                    if (string.IsNullOrEmpty(portriat.PhotoUrl))
+                    {
+                        url = "~/images/default.jpg";
+                    }
+                    else
+                    {
+                        url = portriat.PhotoUrl;
+                    }
+                }
+                <img src="@url" asp-append-version = "true" />
+            </div>
+        </a>
+    }
+</div>
