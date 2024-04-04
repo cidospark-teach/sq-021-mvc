@@ -34,3 +34,11 @@ a{
     position: absolute;
     right: 20px;
 }
+
+.set-current-nav-item {
+    color: red;
+}
+
+.unset-current-nav-item {
+    color: black;
+}

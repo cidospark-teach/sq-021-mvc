@@ -72,12 +72,14 @@ namespace SQ021_First_Web_App.Controllers
 
 
         [HttpGet]
+        [Authorize(Policy = "PolicyForAddNew")]
         public IActionResult AddNew()
         {
             return View();
         }
 
         [HttpPost]
+        [Authorize(Policy = "PolicyForAddNew")]
         public async Task<IActionResult> AddNew(AddDogViewModel model)
         {
             // validating the model

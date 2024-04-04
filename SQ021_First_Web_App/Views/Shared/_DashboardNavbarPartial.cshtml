@@ -1,0 +1,47 @@
+﻿@{
+    string currentpage = ViewBag.CurrentPage;
+}
+<style>
+    .nav-container{
+        display: flex;
+        justify-content: flex-start;
+        border: 1px solid grey;
+        padding: 5px;
+        margin: 5px 0px;
+        border-radius: 6px;
+        padding-left: 20px;
+        margin-bottom: 40px;
+    }
+    .nav-container .dnav-item{
+        margin-right: 30px;
+        text-decoration : none;
+        color: black;
+        font-weight: bold;
+        font-size: 16px;
+    }
+    .nav-container .dnav-item:hover{
+        color: red;
+    }
+    
+</style>
+<div class="nav-container">
+    @if (currentpage == "overview")
+    {
+        <a asp-action="index" asp-controller="dashboard" class="dnav-item set-current-nav-item" id="overview">Overview</a>
+    }else{
+        <a asp-action="index" asp-controller="dashboard" class="dnav-item" id="overview">Overview</a>
+    }
+
+    @if (currentpage == "manage-roles")
+    {
+        <a asp-action="manageRoles" asp-controller="dashboard" class="dnav-item set-current-nav-item" id="manage-roles">Manage Roles</a>
+    }else{
+        <a asp-action="manageRoles" asp-controller="dashboard" class="dnav-item" id="manage-roles">Manage Roles</a>
+    }
+
+    @if (currentpage == "manage-claims"){
+        <a asp-action="manageClaims" asp-controller="dashboard" class="dnav-item set-current-nav-item" id="manage-claims">Manage Claims</a>
+    }else{
+        <a asp-action="manageClaims" asp-controller="dashboard" class="dnav-item" id="manage-claims">Manage Claims</a>
+    }
+</div>

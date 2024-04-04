@@ -3,6 +3,7 @@ using Microsoft.AspNetCore.Mvc;
 using SQ021_First_Web_App.Models.Entity;
 using SQ021_First_Web_App.Models.ViewModels;
 using SQ021_First_Web_App.Services.Interfaces;
+using System.Security.Claims;
 
 namespace SQ021_First_Web_App.Controllers
 {
@@ -47,6 +48,13 @@ namespace SQ021_First_Web_App.Controllers
                 var identityResult = await _userManager.CreateAsync(userToAdd, model.Password);
                 if(identityResult.Succeeded)
                 {
+                    // add the regular role to the user
+                    await _userManager.AddToRoleAsync(userToAdd, "regular");
+
+                    // add the CanAdd claim to a regular user
+                    var canAddClaim = new Claim("CanAdd", "true");
+                    await _userManager.AddClaimAsync(userToAdd, canAddClaim);
+
                     // send confirmation link to email provided on sign up
                     var token = await _userManager.GenerateEmailConfirmationTokenAsync(userToAdd);
                     var link = Url.Action("ConfirmEmail", "Account", new { userToAdd.Email, token }, Request.Scheme);

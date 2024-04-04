@@ -21,6 +21,11 @@ builder.Services.AddIdentity<AppUser, IdentityRole>(
 ).AddEntityFrameworkStores<MyDbContext>()
 .AddDefaultTokenProviders();
 
+builder.Services.AddAuthorization(option =>
+{
+    option.AddPolicy("PolicyForAddNew", policy => policy.RequireClaim("CanAdd", "true"));
+});
+
 builder.Services.AddScoped<IImageService, ImageService>();
 builder.Services.AddScoped<IEmailService, EmailService>();
 builder.Services.AddScoped<IDogRepositoryService, DogRepositoryService>();
@@ -42,6 +47,7 @@ app.UseStaticFiles();
 
 app.UseRouting();
 
+app.UseAuthentication();
 app.UseAuthorization();
 
 app.MapControllerRoute(

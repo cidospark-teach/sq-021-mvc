@@ -30,6 +30,18 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxTaWdudXAuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/hp Envy/Desktop/SQ021/Week5/SQ021_First_Web_App/SQ021_First_Web_App/Views/Dashboard/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGFzaGJvYXJkXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/hp Envy/Desktop/SQ021/Week5/SQ021_First_Web_App/SQ021_First_Web_App/Views/Dashboard/ManageClaims.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGFzaGJvYXJkXE1hbmFnZUNsYWltcy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/hp Envy/Desktop/SQ021/Week5/SQ021_First_Web_App/SQ021_First_Web_App/Views/Dashboard/ManageRoles.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGFzaGJvYXJkXE1hbmFnZVJvbGVzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/hp Envy/Desktop/SQ021/Week5/SQ021_First_Web_App/SQ021_First_Web_App/Views/Gallery/AddNew.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcR2FsbGVyeVxBZGROZXcuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
@@ -68,6 +80,10 @@ build_metadata.AdditionalFiles.CssScope =
 
 [C:/Users/hp Envy/Desktop/SQ021/Week5/SQ021_First_Web_App/SQ021_First_Web_App/Views/Shared/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/hp Envy/Desktop/SQ021/Week5/SQ021_First_Web_App/SQ021_First_Web_App/Views/Shared/_DashboardNavbarPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9EYXNoYm9hcmROYXZiYXJQYXJ0aWFsLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/hp Envy/Desktop/SQ021/Week5/SQ021_First_Web_App/SQ021_First_Web_App/Views/Shared/_ValidationScriptsPartial.cshtml]

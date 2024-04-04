@@ -48,6 +48,22 @@
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\favicon.ico))</OriginalItemSpec>
     </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\images\174d60d4-628c-4241-8ef4-f2414f19e1d8_267fe1c9-d76d-4692-b5fb-ac3d1150f20c_dog_1.jpg))">
+      <SourceType>Package</SourceType>
+      <SourceId>SQ021_First_Web_App</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/SQ021_First_Web_App</BasePath>
+      <RelativePath>images/174d60d4-628c-4241-8ef4-f2414f19e1d8_267fe1c9-d76d-4692-b5fb-ac3d1150f20c_dog_1.jpg</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\images\174d60d4-628c-4241-8ef4-f2414f19e1d8_267fe1c9-d76d-4692-b5fb-ac3d1150f20c_dog_1.jpg))</OriginalItemSpec>
+    </StaticWebAsset>
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\images\267fe1c9-d76d-4692-b5fb-ac3d1150f20c_dog_1.jpg))">
       <SourceType>Package</SourceType>
       <SourceId>SQ021_First_Web_App</SourceId>
